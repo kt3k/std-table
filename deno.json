@@ -1,0 +1,8 @@
+{
+  "fmt": {
+    "semiColons": false
+  },
+  "imports": {
+    "@std/collections": "jsr:@std/collections@^0.224.2"
+  }
+}
