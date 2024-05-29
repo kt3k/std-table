@@ -124,7 +124,7 @@ const pkg: PackageMap = {
     excluded: false,
   },
   "data-structures": {
-    docs: false,
+    docs: true,
     test: true,
     rc: false,
     stabilizationDate: null,
