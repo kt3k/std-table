@@ -6,6 +6,7 @@ type PackageInfo = {
   rc: boolean
   stabilizationIssue?: number
   stabilizationDate: Date | null
+  rcPlannedDate?: Date
   stabilized: boolean
   excluded: boolean
   note?: string
@@ -70,6 +71,7 @@ const pkg: PackageMap = {
     rc: false,
     stabilizationIssue: 4717,
     stabilizationDate: null,
+    rcPlannedDate: new Date("2024-05-31"),
     stabilized: false,
     excluded: false,
   },
@@ -154,6 +156,7 @@ const pkg: PackageMap = {
     rc: false,
     stabilizationIssue: 4856,
     stabilizationDate: null,
+    rcPlannedDate: new Date("2024-05-30"),
     stabilized: false,
     excluded: false,
   },
@@ -349,6 +352,7 @@ const pkg: PackageMap = {
     rc: false,
     stabilizationIssue: 4748,
     stabilizationDate: null,
+    rcPlannedDate: new Date("2024-05-29"),
     stabilized: false,
     excluded: false,
   },
@@ -379,8 +383,8 @@ const datefmt = new Intl.DateTimeFormat("en-US", {
   dateStyle: "medium",
 })
 
-function formatDate(date: Date | null) {
-  if (date === null) {
+function formatDate(date: Date | null | undefined) {
+  if (date === null || date === undefined) {
     return ""
   }
   return datefmt.format(date)
@@ -391,14 +395,16 @@ function priority(pkg: PackageInfo) {
     return -10
   } else if (pkg.rc) {
     return -9
+  } else if (pkg.rcPlannedDate) {
+    return -8 + pkg.rcPlannedDate.getTime() / 1800000000000
   } else if (pkg.stabilizationIssue) {
-    return -8
-  } else if (pkg.test && pkg.docs) {
     return -7
-  } else if (pkg.test) {
+  } else if (pkg.test && pkg.docs) {
     return -6
-  } else if (pkg.docs) {
+  } else if (pkg.test) {
     return -5
+  } else if (pkg.docs) {
+    return -4
   } else if (pkg.excluded) {
     return 1
   }
@@ -413,20 +419,20 @@ function writeTable(pkg: PackageMap) {
 
   console.log(
     `
-| Package | Docs | Test | RC | 1.0.0 | The issue | Stabilization Date |
-| ------- | ---- | ---- | -- | ----- | --------- | ------------------ |`,
+| Package | Docs | Test | RC | 1.0.0 | The issue | Stabilization Date | RC Planned Date |
+| ------- | ---- | ---- | -- | ----- | --------- | ------------------ | --------------- |`,
   )
 
   for (const [name, info] of included) {
     console.log(
-      `| ${name} | ${formatCheck(info.docs)} | ${formatCheck(info.test)} | ${
-        formatCheck(info.rc)
-      } | ${formatCheck(info.stabilized)} | ${
+      `| [${name}](https://jsr.io/@std/${name}) | ${formatCheck(info.docs)} | ${
+        formatCheck(info.test)
+      } | ${formatCheck(info.rc)} | ${formatCheck(info.stabilized)} | ${
         info.stabilizationIssue
           ? `[#${info.stabilizationIssue}](https://github.com/denoland/deno_std/issues/${info.stabilizationIssue})`
           : ""
       } | ${formatDate(info.stabilizationDate)} | ${
-        info.excluded ? "Yes" : ""
+        formatDate(info.rcPlannedDate)
       } |`,
     )
   }
