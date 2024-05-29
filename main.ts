@@ -193,7 +193,7 @@ const pkg: PackageMap = {
     excluded: false,
   },
   html: {
-    docs: false,
+    docs: true,
     test: true,
     rc: false,
     stabilizationDate: null,
@@ -347,7 +347,7 @@ const pkg: PackageMap = {
     excluded: false,
   },
   uuid: {
-    docs: false,
+    docs: true,
     test: true,
     rc: false,
     stabilizationIssue: 4748,
