@@ -393,6 +393,12 @@ function priority(pkg: PackageInfo) {
     return -9
   } else if (pkg.stabilizationIssue) {
     return -8
+  } else if (pkg.test && pkg.docs) {
+    return -7
+  } else if (pkg.test) {
+    return -6
+  } else if (pkg.docs) {
+    return -5
   } else if (pkg.excluded) {
     return 1
   }
@@ -407,8 +413,8 @@ function writeTable(pkg: PackageMap) {
 
   console.log(
     `
-| Package | Docs | Test | RC | 1.0.0 | Stbl. issue | Stbl. Date |
-| ------- | ---- | ---- | -- | ----- | ----------- | ---------- |`,
+| Package | Docs | Test | RC | 1.0.0 | The issue | Stabilization Date |
+| ------- | ---- | ---- | -- | ----- | --------- | ------------------ |`,
   )
 
   for (const [name, info] of included) {
