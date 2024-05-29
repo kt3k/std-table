@@ -113,6 +113,7 @@ const pkg: PackageMap = {
     docs: false,
     test: false,
     rc: false,
+    stabilizationIssue: 4885,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
