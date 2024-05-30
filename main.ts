@@ -155,10 +155,9 @@ const pkg: PackageMap = {
   encoding: {
     docs: true,
     test: true,
-    rc: false,
+    rc: true,
     stabilizationIssue: 4856,
-    stabilizationDate: null,
-    rcPlannedDate: new Date("2024-05-30"),
+    stabilizationDate: new Date("2024-06-30"),
     stabilized: false,
     excluded: false,
   },
