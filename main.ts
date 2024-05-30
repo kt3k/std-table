@@ -66,7 +66,7 @@ const pkg: PackageMap = {
       "Excluded because it's in the process of migrating from Reader/Writer to Web Stream.",
   },
   assert: {
-    docs: false,
+    docs: true,
     test: true,
     rc: false,
     stabilizationIssue: 4717,
@@ -111,7 +111,7 @@ const pkg: PackageMap = {
   },
   crypto: {
     docs: false,
-    test: false,
+    test: true,
     rc: false,
     stabilizationIssue: 4885,
     stabilizationDate: null,
