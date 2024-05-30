@@ -1,6 +1,7 @@
 {
   "tasks": {
-    "copy": "deno run main.ts | pbcopy"
+    "copy": "deno run main.ts | pbcopy",
+    "update": "git add . && git commit -m update && git push origin HEAD"
   },
   "fmt": {
     "semiColons": false
