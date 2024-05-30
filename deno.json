@@ -1,4 +1,7 @@
 {
+  "tasks": {
+    "copy": "deno run main.ts | pbcopy"
+  },
   "fmt": {
     "semiColons": false
   },
