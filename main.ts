@@ -315,7 +315,7 @@ const pkg: PackageMap = {
     excluded: false,
   },
   toml: {
-    docs: false,
+    docs: true,
     test: true,
     stabilizationIssue: 4923,
     stabilizationDate: null,
