@@ -212,6 +212,7 @@ const pkg: PackageMap = {
     docs: false,
     test: false,
     stabilizationDate: null,
+    rcPlannedDate: new Date("2024-06-11"),
     stabilized: false,
     excluded: false,
   },
