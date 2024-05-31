@@ -3,7 +3,6 @@ import { sortBy } from "@std/collections/sort-by"
 type PackageInfo = {
   docs: boolean
   test: boolean
-  rc: boolean
   stabilizationIssue?: number
   stabilizationDate: Date | null
   rcPlannedDate?: Date
@@ -58,7 +57,6 @@ const pkg: PackageMap = {
   archive: {
     docs: false,
     test: false,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: true,
@@ -68,7 +66,6 @@ const pkg: PackageMap = {
   assert: {
     docs: true,
     test: true,
-    rc: false,
     stabilizationIssue: 4717,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-03"),
@@ -78,7 +75,6 @@ const pkg: PackageMap = {
   async: {
     docs: true,
     test: true,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -86,7 +82,6 @@ const pkg: PackageMap = {
   bytes: {
     docs: true,
     test: true,
-    rc: true,
     stabilizationIssue: 4629,
     stabilizationDate: new Date("2024-06-07"),
     stabilized: false,
@@ -95,7 +90,6 @@ const pkg: PackageMap = {
   cli: {
     docs: true,
     test: false,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -103,16 +97,14 @@ const pkg: PackageMap = {
   collections: {
     docs: true,
     test: true,
-    rc: true,
     stabilizationIssue: 4647,
     stabilizationDate: new Date("2024-06-20"),
     stabilized: false,
     excluded: false,
   },
   crypto: {
-    docs: false,
+    docs: true,
     test: true,
-    rc: false,
     stabilizationIssue: 4885,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-05-31"),
@@ -122,7 +114,6 @@ const pkg: PackageMap = {
   csv: {
     docs: false,
     test: false,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -130,7 +121,6 @@ const pkg: PackageMap = {
   "data-structures": {
     docs: true,
     test: true,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -138,7 +128,6 @@ const pkg: PackageMap = {
   datetime: {
     docs: false,
     test: true,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: true,
@@ -147,7 +136,6 @@ const pkg: PackageMap = {
   dotenv: {
     docs: false,
     test: false,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -155,7 +143,6 @@ const pkg: PackageMap = {
   encoding: {
     docs: true,
     test: true,
-    rc: true,
     stabilizationIssue: 4856,
     stabilizationDate: new Date("2024-06-30"),
     stabilized: false,
@@ -164,7 +151,6 @@ const pkg: PackageMap = {
   expect: {
     docs: true,
     test: false,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -172,7 +158,6 @@ const pkg: PackageMap = {
   fmt: {
     docs: true,
     test: false,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -180,7 +165,6 @@ const pkg: PackageMap = {
   "front-matter": {
     docs: true,
     test: false,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -188,7 +172,6 @@ const pkg: PackageMap = {
   fs: {
     docs: false,
     test: false,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -196,7 +179,6 @@ const pkg: PackageMap = {
   html: {
     docs: true,
     test: true,
-    rc: false,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-04"),
     stabilized: false,
@@ -205,7 +187,6 @@ const pkg: PackageMap = {
   http: {
     docs: true,
     test: false,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -213,7 +194,6 @@ const pkg: PackageMap = {
   ini: {
     docs: true,
     test: true,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -221,7 +201,6 @@ const pkg: PackageMap = {
   io: {
     docs: false,
     test: false,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -229,7 +208,6 @@ const pkg: PackageMap = {
   json: {
     docs: false,
     test: false,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -237,7 +215,6 @@ const pkg: PackageMap = {
   jsonc: {
     docs: true,
     test: false,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -245,7 +222,6 @@ const pkg: PackageMap = {
   log: {
     docs: false,
     test: false,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: true,
@@ -254,7 +230,6 @@ const pkg: PackageMap = {
   "media-types": {
     docs: true,
     test: true,
-    rc: true,
     stabilizationIssue: 4730,
     stabilizationDate: new Date("2024-06-21"),
     stabilized: false,
@@ -263,7 +238,6 @@ const pkg: PackageMap = {
   msgpack: {
     docs: true,
     test: false,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -271,7 +245,6 @@ const pkg: PackageMap = {
   net: {
     docs: false,
     test: true,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -279,7 +252,6 @@ const pkg: PackageMap = {
   path: {
     docs: false,
     test: false,
-    rc: false,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-05"),
     stabilized: false,
@@ -288,7 +260,6 @@ const pkg: PackageMap = {
   regexp: {
     docs: true,
     test: true,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -296,7 +267,6 @@ const pkg: PackageMap = {
   semver: {
     docs: true,
     test: false,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -304,7 +274,6 @@ const pkg: PackageMap = {
   streams: {
     docs: true,
     test: false,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -312,7 +281,6 @@ const pkg: PackageMap = {
   testing: {
     docs: false,
     test: false,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -320,7 +288,6 @@ const pkg: PackageMap = {
   text: {
     docs: true,
     test: true,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -328,7 +295,6 @@ const pkg: PackageMap = {
   toml: {
     docs: false,
     test: true,
-    rc: false,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-06"),
     stabilized: false,
@@ -337,7 +303,6 @@ const pkg: PackageMap = {
   ulid: {
     docs: true,
     test: true,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -345,7 +310,6 @@ const pkg: PackageMap = {
   url: {
     docs: true,
     test: true,
-    rc: false,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-07"),
     stabilized: false,
@@ -354,7 +318,6 @@ const pkg: PackageMap = {
   uuid: {
     docs: true,
     test: true,
-    rc: false,
     stabilizationIssue: 4748,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-05-31"),
@@ -364,7 +327,6 @@ const pkg: PackageMap = {
   webgpu: {
     docs: true,
     test: false,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: true,
@@ -373,7 +335,6 @@ const pkg: PackageMap = {
   yaml: {
     docs: false,
     test: false,
-    rc: false,
     stabilizationDate: null,
     stabilized: false,
     excluded: false,
@@ -398,8 +359,8 @@ function formatDate(date: Date | null | undefined) {
 function priority(pkg: PackageInfo) {
   if (pkg.stabilized) {
     return -10
-  } else if (pkg.rc) {
-    return -9
+  } else if (pkg.stabilizationDate) {
+    return -9 + (pkg.stabilizationDate.getTime()) / 1800000000000
   } else if (pkg.rcPlannedDate) {
     return -8 + pkg.rcPlannedDate.getTime() / 1800000000000
   } else if (pkg.stabilizationIssue) {
@@ -432,7 +393,9 @@ function writeTable(pkg: PackageMap) {
     console.log(
       `| [${name}](https://jsr.io/@std/${name}) | ${formatCheck(info.docs)} | ${
         formatCheck(info.test)
-      } | ${formatCheck(info.rc)} | ${formatCheck(info.stabilized)} | ${
+      } | ${formatCheck(info.stabilizationDate !== null)} | ${
+        formatCheck(info.stabilized)
+      } | ${
         info.stabilizationIssue
           ? `[#${info.stabilizationIssue}](https://github.com/denoland/deno_std/issues/${info.stabilizationIssue})`
           : ""
