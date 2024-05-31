@@ -187,6 +187,7 @@ const pkg: PackageMap = {
   html: {
     docs: true,
     test: true,
+    stabilizationIssue: 4921,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-04"),
     stabilized: false,
@@ -267,6 +268,7 @@ const pkg: PackageMap = {
   path: {
     docs: false,
     test: false,
+    stabilizationIssue: 4922,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-05"),
     stabilized: false,
@@ -315,6 +317,7 @@ const pkg: PackageMap = {
   toml: {
     docs: false,
     test: true,
+    stabilizationIssue: 4923,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-06"),
     stabilized: false,
@@ -331,6 +334,7 @@ const pkg: PackageMap = {
   url: {
     docs: true,
     test: true,
+    stabilizationIssue: 4924,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-07"),
     stabilized: false,
