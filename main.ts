@@ -266,7 +266,7 @@ const pkg: PackageMap = {
     excluded: false,
   },
   path: {
-    docs: false,
+    docs: true,
     test: false,
     stabilizationIssue: 4922,
     stabilizationDate: null,
