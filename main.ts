@@ -5,6 +5,7 @@ type PackageInfo = {
   test: boolean
   stabilizationIssue?: number
   stabilizationDate: Date | null
+  rcDate?: Date
   rcPlannedDate?: Date
   stabilized: boolean
   excluded: boolean
@@ -84,6 +85,7 @@ const pkg: PackageMap = {
     docs: true,
     test: true,
     stabilizationIssue: 4629,
+    rcDate: new Date("2024-05-07"),
     stabilizationDate: new Date("2024-06-07"),
     stabilized: false,
     excluded: false,
@@ -100,6 +102,7 @@ const pkg: PackageMap = {
     docs: true,
     test: true,
     stabilizationIssue: 4647,
+    rcDate: new Date("2024-05-20"),
     stabilizationDate: new Date("2024-06-20"),
     stabilized: false,
     excluded: false,
@@ -108,6 +111,7 @@ const pkg: PackageMap = {
     docs: true,
     test: true,
     stabilizationIssue: 4885,
+    rcDate: new Date("2024-05-31"),
     stabilizationDate: new Date("2024-06-30"),
     stabilized: false,
     excluded: false,
@@ -148,6 +152,7 @@ const pkg: PackageMap = {
     docs: true,
     test: true,
     stabilizationIssue: 4856,
+    rcDate: new Date("2024-05-30"),
     stabilizationDate: new Date("2024-06-30"),
     stabilized: false,
     excluded: false,
@@ -245,6 +250,7 @@ const pkg: PackageMap = {
     docs: true,
     test: true,
     stabilizationIssue: 4730,
+    rcDate: new Date("2024-05-21"),
     stabilizationDate: new Date("2024-06-21"),
     stabilized: false,
     excluded: false,
@@ -344,6 +350,7 @@ const pkg: PackageMap = {
     docs: true,
     test: true,
     stabilizationIssue: 4748,
+    rcDate: new Date("2024-05-31"),
     stabilizationDate: new Date("2024-06-30"),
     stabilized: false,
     excluded: false,
