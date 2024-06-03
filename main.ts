@@ -6,6 +6,7 @@ type PackageInfo = {
   test: boolean
   stabilizationIssue?: number
   stabilizationDate: Date | null
+  stabilizationPlannedDate?: Date
   rcDate?: Date
   rcPlannedDate?: Date
   stabilized: boolean
@@ -70,6 +71,7 @@ const pkg: PackageMap = {
     test: true,
     stabilizationIssue: 4717,
     stabilizationDate: null,
+    stabilizationPlannedDate: new Date("2024-07-03"),
     rcPlannedDate: new Date("2024-06-03"),
     stabilized: false,
     excluded: false,
@@ -79,6 +81,7 @@ const pkg: PackageMap = {
     test: true,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-17"),
+    stabilizationPlannedDate: new Date("2024-07-17"),
     stabilized: false,
     excluded: false,
   },
@@ -96,6 +99,7 @@ const pkg: PackageMap = {
     test: false,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-18"),
+    stabilizationPlannedDate: new Date("2024-07-18"),
     stabilized: false,
     excluded: false,
   },
@@ -122,6 +126,7 @@ const pkg: PackageMap = {
     test: false,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-25"),
+    stabilizationPlannedDate: new Date("2024-07-25"),
     stabilized: false,
     excluded: false,
   },
@@ -130,6 +135,7 @@ const pkg: PackageMap = {
     test: true,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-11"),
+    stabilizationPlannedDate: new Date("2024-07-11"),
     stabilized: false,
     excluded: false,
   },
@@ -146,6 +152,7 @@ const pkg: PackageMap = {
     test: false,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-07-10"),
+    stabilizationPlannedDate: new Date("2024-07-31"),
     stabilized: false,
     excluded: false,
   },
@@ -162,7 +169,8 @@ const pkg: PackageMap = {
     docs: true,
     test: false,
     stabilizationDate: null,
-    rcPlannedDate: new Date("2024-07-05"),
+    rcPlannedDate: new Date("2024-07-04"),
+    stabilizationPlannedDate: new Date("2024-07-25"),
     stabilized: false,
     excluded: false,
   },
@@ -171,6 +179,7 @@ const pkg: PackageMap = {
     test: false,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-21"),
+    stabilizationPlannedDate: new Date("2024-07-21"),
     stabilized: false,
     excluded: false,
   },
@@ -179,6 +188,7 @@ const pkg: PackageMap = {
     test: false,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-07-08"),
+    stabilizationPlannedDate: new Date("2024-07-29"),
     stabilized: false,
     excluded: false,
   },
@@ -187,6 +197,7 @@ const pkg: PackageMap = {
     test: false,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-26"),
+    stabilizationPlannedDate: new Date("2024-07-26"),
     stabilized: false,
     excluded: false,
   },
@@ -196,6 +207,7 @@ const pkg: PackageMap = {
     stabilizationIssue: 4921,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-05"),
+    stabilizationPlannedDate: new Date("2024-07-05"),
     stabilized: false,
     excluded: false,
   },
@@ -204,6 +216,7 @@ const pkg: PackageMap = {
     test: false,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-24"),
+    stabilizationPlannedDate: new Date("2024-07-24"),
     stabilized: false,
     excluded: false,
   },
@@ -212,6 +225,7 @@ const pkg: PackageMap = {
     test: true,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-07-09"),
+    stabilizationPlannedDate: new Date("2024-07-30"),
     stabilized: false,
     excluded: false,
   },
@@ -220,6 +234,7 @@ const pkg: PackageMap = {
     test: false,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-19"),
+    stabilizationPlannedDate: new Date("2024-07-19"),
     stabilized: false,
     excluded: false,
   },
@@ -228,6 +243,7 @@ const pkg: PackageMap = {
     test: false,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-27"),
+    stabilizationPlannedDate: new Date("2024-07-27"),
     stabilized: false,
     excluded: false,
   },
@@ -236,6 +252,7 @@ const pkg: PackageMap = {
     test: false,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-07-01"),
+    stabilizationPlannedDate: new Date("2024-07-22"),
     stabilized: false,
     excluded: false,
   },
@@ -261,6 +278,7 @@ const pkg: PackageMap = {
     test: false,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-07-02"),
+    stabilizationPlannedDate: new Date("2024-07-23"),
     stabilized: false,
     excluded: false,
   },
@@ -269,6 +287,7 @@ const pkg: PackageMap = {
     test: true,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-10"),
+    stabilizationPlannedDate: new Date("2024-07-10"),
     stabilized: false,
     excluded: false,
   },
@@ -278,6 +297,7 @@ const pkg: PackageMap = {
     stabilizationIssue: 4922,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-04"),
+    stabilizationPlannedDate: new Date("2024-07-04"),
     stabilized: false,
     excluded: false,
   },
@@ -286,6 +306,7 @@ const pkg: PackageMap = {
     test: true,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-13"),
+    stabilizationPlannedDate: new Date("2024-07-13"),
     stabilized: false,
     excluded: false,
   },
@@ -294,6 +315,7 @@ const pkg: PackageMap = {
     test: false,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-07-03"),
+    stabilizationPlannedDate: new Date("2024-07-24"),
     stabilized: false,
     excluded: false,
   },
@@ -302,6 +324,7 @@ const pkg: PackageMap = {
     test: false,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-20"),
+    stabilizationPlannedDate: new Date("2024-07-20"),
     stabilized: false,
     excluded: false,
   },
@@ -310,6 +333,7 @@ const pkg: PackageMap = {
     test: false,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-28"),
+    stabilizationPlannedDate: new Date("2024-07-28"),
     stabilized: false,
     excluded: false,
   },
@@ -318,6 +342,7 @@ const pkg: PackageMap = {
     test: true,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-14"),
+    stabilizationPlannedDate: new Date("2024-07-14"),
     stabilized: false,
     excluded: false,
   },
@@ -327,6 +352,7 @@ const pkg: PackageMap = {
     stabilizationIssue: 4923,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-06"),
+    stabilizationPlannedDate: new Date("2024-07-06"),
     stabilized: false,
     excluded: false,
   },
@@ -335,6 +361,7 @@ const pkg: PackageMap = {
     test: true,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-12"),
+    stabilizationPlannedDate: new Date("2024-07-12"),
     stabilized: false,
     excluded: false,
   },
@@ -344,6 +371,7 @@ const pkg: PackageMap = {
     stabilizationIssue: 4924,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-07"),
+    stabilizationPlannedDate: new Date("2024-07-07"),
     stabilized: false,
     excluded: false,
   },
@@ -369,6 +397,7 @@ const pkg: PackageMap = {
     test: false,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-07-05"),
+    stabilizationPlannedDate: new Date("2024-07-26"),
     stabilized: false,
     excluded: false,
   },
@@ -450,12 +479,11 @@ function tableForRoadmapIssue(
 
 function tableForBlog(
   included: [string, PackageInfo][],
-  excluded: [string, PackageInfo][],
 ) {
   console.log(
     `
-| Package | RC Date | Stabilization Date | RC Planned Date |
-| ------- | ------- | ------------------ | --------------- |`,
+| Package | RC Date | Stabilization Date | RC Planned Date | Stabilization Planned Date |
+| ------- | ------- | ------------------ | --------------- | -------------------------- |`,
   )
 
   for (const [name, info] of included) {
@@ -464,19 +492,14 @@ function tableForBlog(
         formatDate(info.rcDate)
       } | ${formatDate(info.stabilizationDate)} | ${
         formatDate(info.rcPlannedDate)
-      } |`,
+      } | ${formatDate(info.stabilizationPlannedDate)} |`,
     )
   }
+}
 
-  console.log(`
-
-### Excluded Packages
-
-| Package | Note |
-| ------- | ---- |`)
-
-  for (const [name, info] of excluded) {
-    console.log(`| ${name} | ${info.note ?? ""} |`)
+function words(included: [string, PackageInfo][]) {
+  for (const [name, info] of included) {
+    console.log(name)
   }
 }
 
@@ -491,7 +514,9 @@ const included = entries.filter(([, info]) => !info.excluded)
 const excluded = entries.filter(([, info]) => info.excluded)
 
 if (args.blog) {
-  tableForBlog(included, excluded)
+  tableForBlog(included)
+} else if (args.words) {
+  words(included)
 } else {
   tableForRoadmapIssue(included, excluded)
 }
