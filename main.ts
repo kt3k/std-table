@@ -1,4 +1,5 @@
 import { sortBy } from "@std/collections/sort-by"
+import { parseArgs } from "@std/cli/parse-args"
 
 type PackageInfo = {
   docs: boolean
@@ -409,12 +410,10 @@ function priority(pkg: PackageInfo) {
   return 0
 }
 
-function writeTable(pkg: PackageMap) {
-  let entries = Object.entries(pkg)
-  entries = sortBy(entries, ([, info]) => priority(info))
-
-  const included = entries.filter(([, info]) => !info.excluded)
-
+function tableForRoadmapIssue(
+  included: [string, PackageInfo][],
+  excluded: [string, PackageInfo][],
+) {
   console.log(
     `
 | Package | Docs | Test | RC | 1.0.0 | The issue | Stabilization Date | RC Planned Date |
@@ -444,10 +443,55 @@ function writeTable(pkg: PackageMap) {
 | Package | Note |
 | ------- | ---- |`)
 
-  const excluded = entries.filter(([, info]) => info.excluded)
   for (const [name, info] of excluded) {
     console.log(`| ${name} | ${info.note ?? ""} |`)
   }
 }
 
-writeTable(pkg)
+function tableForBlog(
+  included: [string, PackageInfo][],
+  excluded: [string, PackageInfo][],
+) {
+  console.log(
+    `
+| Package | RC Date | Stabilization Date | RC Planned Date |
+| ------- | ------- | ------------------ | --------------- |`,
+  )
+
+  for (const [name, info] of included) {
+    console.log(
+      `| [${name}](https://jsr.io/@std/${name}) | ${
+        formatDate(info.rcDate)
+      } | ${formatDate(info.stabilizationDate)} | ${
+        formatDate(info.rcPlannedDate)
+      } |`,
+    )
+  }
+
+  console.log(`
+
+### Excluded Packages
+
+| Package | Note |
+| ------- | ---- |`)
+
+  for (const [name, info] of excluded) {
+    console.log(`| ${name} | ${info.note ?? ""} |`)
+  }
+}
+
+const args = parseArgs(Deno.args, {
+  boolean: ["--blog"],
+})
+
+let entries = Object.entries(pkg)
+entries = sortBy(entries, ([, info]) => priority(info))
+
+const included = entries.filter(([, info]) => !info.excluded)
+const excluded = entries.filter(([, info]) => info.excluded)
+
+if (args.blog) {
+  tableForBlog(included, excluded)
+} else {
+  tableForRoadmapIssue(included, excluded)
+}
