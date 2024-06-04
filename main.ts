@@ -498,7 +498,7 @@ function tableForBlog(
 }
 
 function words(included: [string, PackageInfo][]) {
-  for (const [name, info] of included) {
+  for (const [name, _info] of included) {
     console.log(name)
   }
 }
