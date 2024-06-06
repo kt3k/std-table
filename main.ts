@@ -478,14 +478,14 @@ function tableForBlog(
 ) {
   console.log(
     `
-| Package | RC Date | Stabilization Date | RC Planned Date | Stabilization Planned Date |
-| ------- | ------- | ------------------ | --------------- | -------------------------- |`,
+| Package | Stabilized | Stabilization Date | RC Planned Date | Stabilization Planned Date |
+| ------- | ---------- | ------------------ | --------------- | -------------------------- |`,
   )
 
   for (const [name, info] of included) {
     console.log(
       `| [${name}](https://jsr.io/@std/${name}) | ${
-        formatDate(info.rcDate)
+        formatCheck(info.stabilized)
       } | ${formatDate(info.stabilizationDate)} | ${
         formatDate(info.rcPlannedDate)
       } | ${formatDate(info.stabilizationPlannedDate)} |`,
