@@ -2,6 +2,7 @@
   "tasks": {
     "copy": "deno run main.ts | pbcopy",
     "blog": "deno run main.ts --blog | pbcopy",
+    "words": "deno run main.ts --words | pbcopy",
     "update": "git add . && git commit -m update && git push origin HEAD"
   },
   "fmt": {
