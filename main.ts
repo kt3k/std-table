@@ -78,6 +78,7 @@ const pkg: PackageMap = {
   async: {
     docs: true,
     test: true,
+    stabilizationIssue: 5001,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-17"),
     stabilizationPlannedDate: new Date("2024-07-17"),
@@ -96,6 +97,7 @@ const pkg: PackageMap = {
   cli: {
     docs: true,
     test: false,
+    stabilizationIssue: 5002,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-18"),
     stabilizationPlannedDate: new Date("2024-07-18"),
@@ -123,6 +125,7 @@ const pkg: PackageMap = {
   csv: {
     docs: false,
     test: false,
+    stabilizationIssue: 5012,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-07-02"),
     stabilizationPlannedDate: new Date("2024-07-23"),
@@ -132,6 +135,7 @@ const pkg: PackageMap = {
   "data-structures": {
     docs: true,
     test: true,
+    stabilizationIssue: 4986,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-10"),
     stabilizationPlannedDate: new Date("2024-07-10"),
@@ -149,6 +153,7 @@ const pkg: PackageMap = {
   dotenv: {
     docs: false,
     test: false,
+    stabilizationIssue: 5018,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-07-10"),
     stabilizationPlannedDate: new Date("2024-07-31"),
@@ -167,6 +172,7 @@ const pkg: PackageMap = {
   expect: {
     docs: true,
     test: false,
+    stabilizationIssue: 5014,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-07-04"),
     stabilizationPlannedDate: new Date("2024-07-25"),
@@ -176,6 +182,7 @@ const pkg: PackageMap = {
   fmt: {
     docs: true,
     test: false,
+    stabilizationIssue: 5005,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-21"),
     stabilizationPlannedDate: new Date("2024-07-21"),
@@ -185,6 +192,7 @@ const pkg: PackageMap = {
   "front-matter": {
     docs: true,
     test: false,
+    stabilizationIssue: 5016,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-07-08"),
     stabilizationPlannedDate: new Date("2024-07-29"),
@@ -192,8 +200,9 @@ const pkg: PackageMap = {
     excluded: false,
   },
   fs: {
-    docs: false,
+    docs: true,
     test: false,
+    stabilizationIssue: 5008,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-26"),
     stabilizationPlannedDate: new Date("2024-07-26"),
@@ -212,6 +221,7 @@ const pkg: PackageMap = {
   http: {
     docs: true,
     test: false,
+    stabilizationIssue: 5007,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-25"),
     stabilizationPlannedDate: new Date("2024-07-25"),
@@ -221,6 +231,7 @@ const pkg: PackageMap = {
   ini: {
     docs: true,
     test: true,
+    stabilizationIssue: 5017,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-07-09"),
     stabilizationPlannedDate: new Date("2024-07-30"),
@@ -230,6 +241,7 @@ const pkg: PackageMap = {
   io: {
     docs: false,
     test: false,
+    stabilizationIssue: 5003,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-19"),
     stabilizationPlannedDate: new Date("2024-07-19"),
@@ -239,6 +251,7 @@ const pkg: PackageMap = {
   json: {
     docs: false,
     test: false,
+    stabilizationIssue: 5009,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-27"),
     stabilizationPlannedDate: new Date("2024-07-27"),
@@ -248,6 +261,7 @@ const pkg: PackageMap = {
   jsonc: {
     docs: true,
     test: false,
+    stabilizationIssue: 5011,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-07-01"),
     stabilizationPlannedDate: new Date("2024-07-22"),
@@ -274,6 +288,7 @@ const pkg: PackageMap = {
   msgpack: {
     docs: true,
     test: false,
+    stabilizationIssue: 5000,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-14"),
     stabilizationPlannedDate: new Date("2024-07-14"),
@@ -281,8 +296,9 @@ const pkg: PackageMap = {
     excluded: false,
   },
   net: {
-    docs: false,
+    docs: true,
     test: true,
+    stabilizationIssue: 5006,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-24"),
     stabilizationPlannedDate: new Date("2024-07-24"),
@@ -300,6 +316,7 @@ const pkg: PackageMap = {
   },
   regexp: {
     docs: true,
+    stabilizationIssue: 4998,
     test: true,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-12"),
@@ -310,6 +327,7 @@ const pkg: PackageMap = {
   semver: {
     docs: true,
     test: false,
+    stabilizationIssue: 5013,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-07-03"),
     stabilizationPlannedDate: new Date("2024-07-24"),
@@ -319,6 +337,7 @@ const pkg: PackageMap = {
   streams: {
     docs: true,
     test: false,
+    stabilizationIssue: 5004,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-20"),
     stabilizationPlannedDate: new Date("2024-07-20"),
@@ -328,6 +347,7 @@ const pkg: PackageMap = {
   testing: {
     docs: false,
     test: false,
+    stabilizationIssue: 5010,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-28"),
     stabilizationPlannedDate: new Date("2024-07-28"),
@@ -337,6 +357,7 @@ const pkg: PackageMap = {
   text: {
     docs: true,
     test: true,
+    stabilizationIssue: 4999,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-13"),
     stabilizationPlannedDate: new Date("2024-07-13"),
@@ -355,6 +376,7 @@ const pkg: PackageMap = {
   ulid: {
     docs: true,
     test: true,
+    stabilizationIssue: 4996,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-11"),
     stabilizationPlannedDate: new Date("2024-07-11"),
@@ -390,6 +412,7 @@ const pkg: PackageMap = {
   yaml: {
     docs: false,
     test: false,
+    stabilizationIssue: 5015,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-07-05"),
     stabilizationPlannedDate: new Date("2024-07-26"),
