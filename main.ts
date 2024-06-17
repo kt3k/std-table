@@ -341,7 +341,7 @@ const pkg: PackageMap = {
     excluded: false,
   },
   testing: {
-    docs: false,
+    docs: true,
     test: false,
     stabilizationIssue: 5010,
     stabilizationDate: null,
