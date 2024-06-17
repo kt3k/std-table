@@ -95,7 +95,7 @@ const pkg: PackageMap = {
   },
   cli: {
     docs: true,
-    test: false,
+    test: true,
     stabilizationIssue: 5002,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-18"),
