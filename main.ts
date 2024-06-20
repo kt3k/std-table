@@ -257,7 +257,7 @@ const pkg: PackageMap = {
   },
   jsonc: {
     docs: true,
-    test: false,
+    test: true,
     stabilizationIssue: 5011,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-24"),
