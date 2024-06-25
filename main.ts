@@ -276,8 +276,8 @@ const pkg: PackageMap = {
     test: true,
     stabilizationIssue: 4730,
     rcDate: new Date("2024-05-21"),
-    stabilizationDate: new Date("2024-06-21"),
-    stabilized: false,
+    stabilizationDate: new Date("2024-06-24"),
+    stabilized: true,
     excluded: false,
   },
   msgpack: {
