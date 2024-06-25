@@ -148,7 +148,7 @@ const pkg: PackageMap = {
     note: "This package will be re-designed after Temporal is shipped.",
   },
   dotenv: {
-    docs: false,
+    docs: true,
     test: false,
     stabilizationIssue: 5018,
     stabilizationDate: null,
