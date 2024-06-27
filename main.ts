@@ -122,7 +122,7 @@ const pkg: PackageMap = {
   },
   csv: {
     docs: true,
-    test: false,
+    test: true,
     stabilizationIssue: 5012,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-06-27"),
@@ -397,7 +397,7 @@ const pkg: PackageMap = {
     note: "This package is excluded because WebGPU is not yet stable.",
   },
   yaml: {
-    docs: false,
+    docs: true,
     test: false,
     stabilizationIssue: 5015,
     stabilizationDate: null,
