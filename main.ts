@@ -382,7 +382,7 @@ const pkg: PackageMap = {
     stabilizationIssue: 4748,
     rcDate: new Date("2024-05-31"),
     stabilizationDate: new Date("2024-06-30"),
-    stabilized: false,
+    stabilized: true,
     excluded: false,
   },
   webgpu: {
