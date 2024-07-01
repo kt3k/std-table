@@ -319,7 +319,7 @@ const pkg: PackageMap = {
     test: true,
     stabilizationIssue: 5013,
     rcDate: new Date("2024-06-28"),
-    stabilizationDate: new Date("2024-06-28"),
+    stabilizationDate: new Date("2024-07-28"),
     stabilized: false,
     excluded: false,
   },
