@@ -117,7 +117,7 @@ const pkg: PackageMap = {
     stabilizationIssue: 4885,
     rcDate: new Date("2024-05-31"),
     stabilizationDate: new Date("2024-06-30"),
-    stabilized: false,
+    stabilized: true,
     excluded: false,
   },
   csv: {
@@ -162,7 +162,7 @@ const pkg: PackageMap = {
     stabilizationIssue: 4856,
     rcDate: new Date("2024-05-30"),
     stabilizationDate: new Date("2024-06-30"),
-    stabilized: false,
+    stabilized: true,
     excluded: false,
   },
   expect: {
@@ -316,11 +316,10 @@ const pkg: PackageMap = {
   },
   semver: {
     docs: true,
-    test: false,
+    test: true,
     stabilizationIssue: 5013,
-    stabilizationDate: null,
-    rcPlannedDate: new Date("2024-06-28"),
-    stabilizationPlannedDate: new Date("2024-06-28"),
+    rcDate: new Date("2024-06-28"),
+    stabilizationDate: new Date("2024-06-28"),
     stabilized: false,
     excluded: false,
   },
