@@ -422,8 +422,8 @@ function formatDate(date: Date | null | undefined) {
 }
 
 function priority(pkg: PackageInfo) {
-  if (pkg.stabilized) {
-    return -10
+  if (pkg.stabilized && pkg.stabilizationDate) {
+    return -10 + (pkg.stabilizationDate.getTime()) / 1800000000000
   } else if (pkg.stabilizationDate) {
     return -9 + (pkg.stabilizationDate.getTime()) / 1800000000000
   } else if (pkg.rcPlannedDate) {
