@@ -72,7 +72,7 @@ const pkg: PackageMap = {
     stabilizationIssue: 4717,
     rcDate: new Date("2024-06-03"),
     stabilizationDate: new Date("2024-07-03"),
-    stabilized: false,
+    stabilized: true,
     excluded: false,
   },
   async: {
