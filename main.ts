@@ -154,7 +154,9 @@ const pkg: PackageMap = {
     rcPlannedDate: new Date("2024-07-05"),
     stabilizationPlannedDate: new Date("2024-07-26"),
     stabilized: false,
-    excluded: false,
+    excluded: true,
+    note:
+      "This package is excluded because this feature conflicts with Deno CLI --env option.",
   },
   encoding: {
     docs: true,
@@ -228,7 +230,9 @@ const pkg: PackageMap = {
     rcPlannedDate: new Date("2024-07-04"),
     stabilizationPlannedDate: new Date("2024-07-25"),
     stabilized: false,
-    excluded: false,
+    excluded: true,
+    note:
+      "This package has very low usage, and also there's no consensus on the design.",
   },
   io: {
     docs: false,
@@ -292,7 +296,9 @@ const pkg: PackageMap = {
     rcPlannedDate: new Date("2024-07-08"),
     stabilizationPlannedDate: new Date("2024-07-29"),
     stabilized: false,
-    excluded: false,
+    excluded: true,
+    note:
+      "This package is excluded because there's no consensus on the API design yet.",
   },
   path: {
     docs: true,
