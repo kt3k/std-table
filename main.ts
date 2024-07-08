@@ -518,6 +518,7 @@ entries = sortBy(entries, ([, info]) => priority(info))
 
 const included = entries.filter(([, info]) => !info.excluded)
 const excluded = entries.filter(([, info]) => info.excluded)
+excluded.sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0)
 
 if (args.blog) {
   tableForBlog(included)
