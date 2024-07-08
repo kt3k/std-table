@@ -232,7 +232,7 @@ const pkg: PackageMap = {
     stabilized: false,
     excluded: true,
     note:
-      "This package has very low usage, and also there's no consensus on the design.",
+      "This package has very low usage, and also there's no consensus on the design. #5329",
   },
   io: {
     docs: false,
