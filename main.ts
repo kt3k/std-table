@@ -289,13 +289,10 @@ const pkg: PackageMap = {
     docs: true,
     test: true,
     stabilizationIssue: 5006,
-    stabilizationDate: null,
-    rcPlannedDate: new Date("2024-07-08"),
-    stabilizationPlannedDate: new Date("2024-07-29"),
+    rcDate: new Date("2024-07-09"),
+    stabilizationDate: new Date("2024-07-30"),
     stabilized: false,
-    excluded: true,
-    note:
-      "This package is excluded because there's no consensus on the API design yet.",
+    excluded: false,
   },
   path: {
     docs: true,
