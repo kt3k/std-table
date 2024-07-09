@@ -226,13 +226,10 @@ const pkg: PackageMap = {
     docs: true,
     test: true,
     stabilizationIssue: 5017,
-    stabilizationDate: null,
-    rcPlannedDate: new Date("2024-07-04"),
-    stabilizationPlannedDate: new Date("2024-07-25"),
+    rcDate: new Date("2024-07-09"),
+    stabilizationDate: new Date("2024-07-30"),
     stabilized: false,
-    excluded: true,
-    note:
-      "This package has very low usage, and also there's no consensus on the design. #5329",
+    excluded: false,
   },
   io: {
     docs: false,
