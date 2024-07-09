@@ -178,7 +178,7 @@ const pkg: PackageMap = {
   },
   fmt: {
     docs: true,
-    test: false,
+    test: true,
     stabilizationIssue: 5005,
     stabilizationDate: null,
     rcPlannedDate: new Date("2024-07-09"),
