@@ -458,9 +458,7 @@ function tableForRoadmapIssue(
         info.stabilizationIssue
           ? `[#${info.stabilizationIssue}](https://github.com/denoland/deno_std/issues/${info.stabilizationIssue})`
           : ""
-      } | ${formatDate(info.stabilizationDate)} | ${
-        formatDate(info.rcPlannedDate)
-      } |`,
+      } | ${formatDate(info.stabilizationDate)} |`,
     )
   }
 
@@ -491,7 +489,7 @@ function tableForBlog(
         formatCheck(info.stabilized)
       } | ${formatDate(info.stabilizationDate)} | ${
         formatDate(info.rcPlannedDate)
-      } |`,
+      } | ${formatDate(info.stabilizationPlannedDate)} |`,
     )
   }
 }
