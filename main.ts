@@ -444,8 +444,8 @@ function tableForRoadmapIssue(
 ) {
   console.log(
     `
-| Package | Docs | Test | RC | 1.0.0 | The issue | Stabilization Date | RC Planned Date |
-| ------- | ---- | ---- | -- | ----- | --------- | ------------------ | --------------- |`,
+| Package | Docs | Test | RC | 1.0.0 | The issue | Stabilization Date |
+| ------- | ---- | ---- | -- | ----- | --------- | ------------------ |`,
   )
 
   for (const [name, info] of included) {
