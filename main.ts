@@ -180,9 +180,8 @@ const pkg: PackageMap = {
     docs: true,
     test: true,
     stabilizationIssue: 5005,
-    stabilizationDate: null,
-    rcPlannedDate: new Date("2024-07-09"),
-    stabilizationPlannedDate: new Date("2024-07-09"),
+    rcDate: new Date("2024-07-10"),
+    stabilizationDate: new Date("2024-07-31"),
     stabilized: false,
     excluded: false,
   },
@@ -210,7 +209,7 @@ const pkg: PackageMap = {
     stabilizationIssue: 4921,
     rcDate: new Date("2024-06-05"),
     stabilizationDate: new Date("2024-07-05"),
-    stabilized: false,
+    stabilized: true,
     excluded: false,
   },
   http: {
@@ -300,7 +299,7 @@ const pkg: PackageMap = {
     stabilizationIssue: 4922,
     rcDate: new Date("2024-06-04"),
     stabilizationDate: new Date("2024-07-04"),
-    stabilized: false,
+    stabilized: true,
     excluded: false,
   },
   regexp: {
@@ -354,7 +353,7 @@ const pkg: PackageMap = {
     stabilizationIssue: 4923,
     rcDate: new Date("2024-06-06"),
     stabilizationDate: new Date("2024-07-06"),
-    stabilized: false,
+    stabilized: true,
     excluded: false,
   },
   ulid: {
