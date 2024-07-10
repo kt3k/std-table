@@ -491,7 +491,7 @@ function tableForBlog(
         formatCheck(info.stabilized)
       } | ${formatDate(info.stabilizationDate)} | ${
         formatDate(info.rcPlannedDate)
-      } | ${formatDate(info.stabilizationPlannedDate)} |`,
+      } |`,
     )
   }
 }
