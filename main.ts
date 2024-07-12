@@ -12,6 +12,7 @@ type PackageInfo = {
   stabilized: boolean
   excluded: boolean
   note?: string
+  reviewers?: string
 }
 
 type Package =
@@ -74,6 +75,7 @@ const pkg: PackageMap = {
     stabilizationDate: new Date("2024-07-03"),
     stabilized: true,
     excluded: false,
+    reviewers: "Jo, Luca",
   },
   async: {
     docs: true,
@@ -92,6 +94,7 @@ const pkg: PackageMap = {
     stabilizationDate: new Date("2024-06-06"),
     stabilized: true,
     excluded: false,
+    reviewers: "Jo, Luca",
   },
   cli: {
     docs: true,
@@ -110,6 +113,7 @@ const pkg: PackageMap = {
     stabilizationDate: new Date("2024-06-20"),
     stabilized: true,
     excluded: false,
+    reviewers: "Jo, Luca",
   },
   crypto: {
     docs: true,
@@ -119,6 +123,7 @@ const pkg: PackageMap = {
     stabilizationDate: new Date("2024-06-30"),
     stabilized: true,
     excluded: false,
+    reviewers: "Jo, Luca",
   },
   csv: {
     docs: true,
@@ -135,7 +140,7 @@ const pkg: PackageMap = {
     stabilizationIssue: 4986,
     rcDate: new Date("2024-06-10"),
     stabilizationDate: new Date("2024-07-10"),
-    stabilized: false,
+    stabilized: true,
     excluded: false,
   },
   datetime: {
@@ -308,7 +313,7 @@ const pkg: PackageMap = {
     test: true,
     rcDate: new Date("2024-06-11"),
     stabilizationDate: new Date("2024-07-11"),
-    stabilized: false,
+    stabilized: true,
     excluded: false,
   },
   semver: {

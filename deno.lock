@@ -8,6 +8,7 @@
       "jsr:@std/collections@^0.224.2": "jsr:@std/collections@0.224.2",
       "jsr:@std/crypto@^0.224.0": "jsr:@std/crypto@0.224.0",
       "jsr:@std/encoding@^0.224.0": "jsr:@std/encoding@0.224.3",
+      "npm:semver": "npm:semver@7.6.2",
       "npm:superjson@1.13.3": "npm:superjson@1.13.3",
       "npm:tailwindcss": "npm:tailwindcss@3.4.3_postcss@8.4.38"
     },
@@ -519,6 +520,10 @@
         "dependencies": {
           "queue-microtask": "queue-microtask@1.2.3"
         }
+      },
+      "semver@7.6.2": {
+        "integrity": "sha512-FNAIBWCx9qcRhoHcgcJ0gvU7SN1lYU2ZXuSfl04bSC5OpvDHFyJCjdNHomPXxjQlCBU67YW64PzY7/VIEH7F2w==",
+        "dependencies": {}
       },
       "shebang-command@2.0.0": {
         "integrity": "sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==",
