@@ -286,7 +286,7 @@ const pkg: PackageMap = {
     stabilizationIssue: 5000,
     rcDate: new Date("2024-06-12"),
     stabilizationDate: new Date("2024-07-12"),
-    stabilized: false,
+    stabilized: true,
     excluded: false,
   },
   net: {
@@ -377,7 +377,8 @@ const pkg: PackageMap = {
     rcDate: new Date("2024-06-07"),
     stabilizationDate: new Date("2024-07-07"),
     stabilized: false,
-    excluded: false,
+    excluded: true,
+    note: "This package needs more discussion. See #4992 for details.",
   },
   uuid: {
     docs: true,
