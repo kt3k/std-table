@@ -367,7 +367,7 @@ const pkg: PackageMap = {
     stabilizationIssue: 4996,
     rcDate: new Date("2024-06-10"),
     stabilizationDate: new Date("2024-07-10"),
-    stabilized: false,
+    stabilized: true,
     excluded: false,
   },
   url: {
