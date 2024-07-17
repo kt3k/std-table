@@ -349,7 +349,7 @@ const pkg: PackageMap = {
     stabilizationIssue: 4999,
     rcDate: new Date("2024-06-11"),
     stabilizationDate: new Date("2024-07-11"),
-    stabilized: false,
+    stabilized: true,
     excluded: false,
   },
   toml: {
