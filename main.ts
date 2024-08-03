@@ -186,8 +186,8 @@ const pkg: PackageMap = {
     test: true,
     stabilizationIssue: 5005,
     rcDate: new Date("2024-07-10"),
-    stabilizationDate: new Date("2024-07-31"),
-    stabilized: false,
+    stabilizationDate: new Date("2024-08-02"),
+    stabilized: true,
     excluded: false,
   },
   "front-matter": {
@@ -222,8 +222,8 @@ const pkg: PackageMap = {
     test: true,
     stabilizationIssue: 5007,
     rcDate: new Date("2024-06-25"),
-    stabilizationDate: new Date("2024-07-25"),
-    stabilized: false,
+    stabilizationDate: new Date("2024-08-02"),
+    stabilized: true,
     excluded: false,
   },
   ini: {
@@ -233,7 +233,9 @@ const pkg: PackageMap = {
     rcDate: new Date("2024-07-09"),
     stabilizationDate: new Date("2024-07-30"),
     stabilized: false,
-    excluded: false,
+    excluded: true,
+    note:
+      "This package is excluded because there still remain various concerns about parse and stringify behavior. See #5614",
   },
   io: {
     docs: false,
@@ -294,8 +296,8 @@ const pkg: PackageMap = {
     test: true,
     stabilizationIssue: 5006,
     rcDate: new Date("2024-07-09"),
-    stabilizationDate: new Date("2024-07-30"),
-    stabilized: false,
+    stabilizationDate: new Date("2024-08-02"),
+    stabilized: true,
     excluded: false,
   },
   path: {
@@ -321,8 +323,8 @@ const pkg: PackageMap = {
     test: true,
     stabilizationIssue: 5013,
     rcDate: new Date("2024-06-28"),
-    stabilizationDate: new Date("2024-07-28"),
-    stabilized: false,
+    stabilizationDate: new Date("2024-08-02"),
+    stabilized: true,
     excluded: false,
   },
   streams: {
@@ -339,8 +341,8 @@ const pkg: PackageMap = {
     test: true,
     stabilizationIssue: 5010,
     rcDate: new Date("2024-06-26"),
-    stabilizationDate: new Date("2024-07-26"),
-    stabilized: false,
+    stabilizationDate: new Date("2024-08-02"),
+    stabilized: true,
     excluded: false,
   },
   text: {
